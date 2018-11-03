@@ -1,0 +1,43 @@
+nav {
+  display:flex;
+  position:relative;
+  z-index: 10;
+  flex-direction: row-reverse;
+  -webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow:0 3px 4px rgba(0, 0, 0, 0.3);
+  min-width: 100%;
+  background: black;
+  /*margin-bottom: 5vw;*/
+}
+
+nav > * {
+  border-right: solid lightyellow 4px;
+  padding:0.6em;
+  text-decoration: none;
+  font-weight: bold;
+  color:white;
+}
+
+a {
+  text-decoration: none;
+  /*color:white;*/
+}
+
+a:visited {
+  /*color:white;*/
+}
+
+a:hover {
+  /*transition-duration: 0.5s;*/
+  background-color: red;
+  /*color:white;*/
+}
+
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

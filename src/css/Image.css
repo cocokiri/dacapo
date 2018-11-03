@@ -1,0 +1,70 @@
+img {
+  max-width: 85vw;
+  z-index: 2;
+  margin: 2em;
+  margin-top: 2em;
+  max-height:70vh;
+  transition: 0.3s;
+  /*border: solid white 3px;*/
+
+  padding: 0.5em;
+  margin-bottom: 0px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+
+}
+.imageWrap {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imageSmaller {
+  max-width: 60vw;
+  padding: 0.8em;
+  align-self: center;
+}
+
+#expanded {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  /*min-width: 90vw;*/
+  min-height: 90vh;
+}
+.sketch {
+  max-height: 25vw;
+}
+
+@media (max-width: 500px) {
+  img {
+    min-height: 30vh;
+    max-width: 90vw;
+  }
+  #expanded {
+    min-height: 50vh;
+     /*min-width: 90vw;*/
+    max-height: 40vh;
+  }
+  .sketch {
+    max-height:100vw;
+  }
+}
+/*to counteract the a href style from Nav*/
+.normalA:hover {
+  transition-duration: 0.5s;
+  background-color: transparent;
+}
+
+.flexContainWrap {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  /*width:95vw;*/
+}

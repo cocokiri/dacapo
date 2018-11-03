@@ -1,0 +1,40 @@
+button {
+  background: repeating-linear-gradient(orchid, yellow);
+  width: 80%;
+  color: white;
+  line-height: 1.5em;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1px;
+  border: 0;
+  outline: 0;
+  transition: 0.5s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.splitter {
+  display: flex;
+  margin-left:20vw;
+  margin-right: 20vw;
+  padding: 1em;
+  margin-top: 2em;
+
+  justify-content: center;
+  flex-grow: 1;
+  background: black;
+  color: white;
+  align-self:center;
+}
+
+@media (max-width: 850px) {
+  button {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+}
+
+button:hover {
+  background:repeating-linear-gradient(royalblue, mediumvioletred);;
+}
