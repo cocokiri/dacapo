@@ -1,0 +1,113 @@
+/* CSS Normalize */
+/*article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],!* 1*/
+/*input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}*!*/
+
+/* Box-sizing border-box */
+/** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
+
+
+html {
+    font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a.g-button:hover {
+    transition-duration: 0.5s;
+    background-color: red;
+    color:white;
+}
+
+.g-menu {
+    display:flex;
+    position:relative;
+    z-index: 10;
+    flex-direction: row-reverse;
+    -webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 3px 4px rgba(0, 0, 0, 0.3);
+    min-width: 100%;
+    background: black;
+
+}
+.g-menu > * {
+    border-right: solid lightyellow 4px;
+    padding:0.6em;
+    text-decoration: none;
+
+    font-weight: bold;
+    color:white;
+}
+
+.g-featureFlex {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.g-margin {
+    margin: 3em;
+}
+
+.g-imageWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.g-textfield {
+    background-color: yellow;
+    text-align: center;
+    padding: 2em;
+    /*margin-top: -1em;*/
+    -webkit-border-radius: 1px;
+    -moz-border-radius:1px;
+    border-radius:1px;
+    -webkit-box-shadow:0 4px 9px rgba(0, 0, 0, 0.3);
+    box-shadow:0 4px 9px rgba(0, 0, 0, 0.3);
+    max-width: 40%;
+
+}
+
+.g-hiLite-black {
+    color: white;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: black;
+    border-radius: 2px;
+    line-height: 2.5em;
+    /*color: rgba(50,50,50,1);*/
+    padding: 0.6em;
+    font-weight: 800;
+    -webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.g-subHiLite {
+    color: white;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: red;
+    border-radius: 2px;
+    margin-top: -1.5em;
+    z-index: -5;
+    /*color: rgba(50,50,50,1);*/
+    font-weight: 550;
+    -webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.g-image {
+    z-index: 2;
+    margin:1em;
+    margin-top:2em;
+    padding: 0.8em;
+    margin-bottom: 0px;
+    align-self: center;
+    max-width: 65%;
+    -webkit-box-shadow:0 5px 12px rgba(0, 0, 0, 0.6);
+    box-shadow:0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/*@media (min-width: 700px), handheld and (orientation: landscape) { ... }*/

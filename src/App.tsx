@@ -1,67 +1,47 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-//typescript allows only this way
-// import styled from 'styled-components'
-// import circuitBody from "./images/ElectricBody.gif";
-// import female from "./images/Fragmentation.gif";
-// import exploit from "./images/Exploitation.png";
-// import leavinghome from "./images/LeavingHome.png";
-// import narrativeillusion from "./images/NarrativeIllusion.png";
-// import socialmedia from "./images/SocialMedia";
-// import practice2 from "./images/BargueHead"
-// import adman from "./images/TheAdMan.png";
-// import practice from "./images/BargueFoot";
-// // import bloggersphere from "./images/TheBloggersphere.png";
-// import anim from "./images/Anim";
-// import unequal from "./images/Inequality_low.jpg"
-import theorists from "./images/TheTheorists.png";
-import About from './About'
-import styled from 'styled-components'
-// import './css/Image.css';
-import {Column, Image} from './components/SimpleStyled'
+import {Column, Image, HeaderWide, Text, Button} from './components/SimpleStyled'
 
+const width = "60vw"
 
-function importAll(r: any) {
-    return r.keys().map(item => item.replace('./', ''));
-}
+const App = (projects) => (
+    <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
 
-// return r.keys().map(r)
+        <Column style={{width: width}}>
+            <br/>
+            <br/>
+            <br/>
+            {projects.slice(0, 3).concat(projects.slice(-2)).map(p => (
+                <>
+                    <HeaderWide>{p.title.toUpperCase()}</HeaderWide>
+                    {p.subtitle &&
+                    <Text style={{
+                        paddingLeft: 0,
+                        paddingRight: 0,
+                        color:"white",
+                        background: "red",
+                        fontWeight: "bold",
+                        width: "60vw",
+                        maxWidth: 100 + "%"
+                    }}>{p.subtitle}</Text>}
+                    <Image style={{marginBottom: 0.05 + "em", width: "97%"}} src={p.image}/>
+                    {p.link &&
+                    <Button style={{width: width}} onClick={() => window.location.replace(p.route)}> P L A Y </Button>}
+                    <Text style={{
+                        paddingLeft: "10%",
+                        paddingRight: "10%",
+                        width: width,
+                        maxWidth: "80%"
+                    }}>{p.alttext || p.text}</Text>
 
-const im = importAll(require.context('./images/', false, /\.(gif|png|jpe?g|svg)$/));
-
-console.log("im", im)
-
-// const Image = require('./components/Image').default;
-
-
-let images = [
-    {
-        name: "The Theorists",
-        path: theorists,
-        caption: "The theorists sit on a platonic solid, " +
-        "discussing their elaborate models while reality is having something else in mind"
-    }
-]
-
-
-
-
-class App extends Component<{ name: string }> {
-    render() {
-        return (
-            <Column>
-                {images.map(image =>(
-                    <React.Fragment>
-                        <Image src={image.path}/>
-
-                </React.Fragment>
-                ))}
-
-                <About/>
-            </Column>
-        );
-    }
-}
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </>
+            ))}
+        </Column>
+    </div>
+)
 
 export default App;

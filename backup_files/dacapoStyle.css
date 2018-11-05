@@ -1,0 +1,168 @@
+/*!* CSS Normalize *!*/
+/*article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],!* 1*/
+/*input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}*!*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             /** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
+* { /*no BS*/
+    margin:0;
+    padding:0;
+    border:0;
+}
+@font-face {
+    font-family: 'american_purposeregular';
+    src: url('../fonts/american_purpose-webfont.eot');
+    src: url('../fonts/american_purpose-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/american_purpose-webfont.woff2') format('woff2'),
+    url('../fonts/american_purpose-webfont.woff') format('woff'),
+    url('../fonts/american_purpose-webfont.ttf') format('truetype'),
+    url('../fonts/american_purpose-webfont.svg#american_purposeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'american_purposeregular', serif;
+    margin-bottom: 1em;
+    background: #feff00;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 2em;
+    text-align: center;
+    /*top: 50%;*/
+    color: rgba(50,50,50,1);
+}
+
+div {
+    color: white;
+}
+
+.button {
+    height: 2em;
+    flex: 1;
+    border: 1px solid white;
+    width:80%;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 1px;
+    animation: buttonAnim 20s infinite;
+    font-family: 'american_purposeregular', serif;
+    transition: 0.3s ease-out;
+    color: rgba(253, 254, 236, 1);
+    box-shadow: 0px 3px rgba(15, 6, 8, 0.24);
+}
+
+
+
+a.button {
+    display:flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    font-size: 40px;
+}
+
+@keyframes buttonAnim {
+    0% {
+        background: rgb(149, 10, 10);
+    }
+
+    50% {
+        background: rgb(108, 6, 237);
+    }
+    100% {
+        background: rgb(149, 10, 10);
+    }
+}
+
+.standout {
+    margin: 1em;
+    padding: 1em;
+    background: black;
+}
+
+html {
+    display:flex;
+    background-image: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);;
+    flex-direction: column;
+    align-items: center;
+}
+
+em {
+    color: rgb(247, 242, 190);
+}
+
+.interlude {
+    background: rgba(254, 94, 36, 0.7);
+    min-width:100vw;
+    min-height: 5em;
+    padding-left: 35%;
+    padding-right: 35%;
+    font-weight:bolder;
+    text-align: center;
+    padding-top: 1.5em;
+    color:white;
+    align-self: center;
+    box-shadow: 3px 3px rgba(15, 6, 8, 0.54);
+}
+
+p {
+    margin-left: 22%;
+    margin-right: 22%;
+    line-height: 1.6;
+    margin-top: 1.5em;
+    margin-bottom:1.5em;
+    text-align: justify;
+    text-align:center;
+    color: rgba(251, 251, 251, 0.87);
+}
+
+b {
+    background: #feff00;
+    color: rgba(50,50,50,1);
+    padding: 0.6em;
+    font-weight: 800;
+    /*margin-right: 0.5em;*/
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+body {
+    display: flex;
+    -webkit-font-smoothing: antialiased;
+    width: 65%;
+    flex: 1;
+    align-self: center;
+    flex-direction: column;
+    /*border: 1px solid blue;*/
+    /*flex-direction: column;*/
+}
+img {
+    border-radius: 2px;
+    flex:1;
+    max-width: 80%;
+    /*max-width: 100px;*/
+}
+
+section {
+
+    border-radius: 3px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display:flex;
+    align-items: center;
+    box-shadow: 1px 4px  1px 0px rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.4);
+
+    /*z-index: -10;*/
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+}
+/*@media (min-width: 700px), handheld and (orientation: landscape) { ... }*/
