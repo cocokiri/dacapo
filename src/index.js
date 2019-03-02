@@ -26,24 +26,43 @@ console.log(routes, 'routes')
 class Index extends Component {
     render() {
         return (
-            <Router history={history}>
-                <div>
-                    <Nav/>
-                    <Switch>
-                        <Route exact path="/" component={() => App(projectData)}/>
-                        <Route path="/sketch" component={Sketches}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/lupa" component={Lupa}/>
-                        {projectData
-                            .filter(pr => pr.route)
-                            .map(p => <Route key={p.route} path={"/" + p.route} component={() => IFrame(p.link, p.route)} />)}
-                        <Route path="/play" component={() => PlayPage(projectData.slice(0, -2))}/>
-                        {/*<Route path="/web-piano" component={() => IFra} />*/}
-                        <Route component={() => <div>Couldn't find the page/url you're looking for</div>}/>
-                    </Switch>
-                </div>
-            </Router>
-        )
+          <Router basename={process.env.PUBLIC_URL} history={history}>
+            <div>
+              <Nav />
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  component={() => App(projectData)}
+                />
+                <Route path="/sketch" component={Sketches} />
+                <Route path="/about" component={About} />
+                <Route path="/lupa" component={Lupa} />
+                {projectData
+                  .filter(pr => pr.route)
+                  .map(p => (
+                    <Route
+                      key={p.route}
+                      path={"/" + p.route}
+                      component={() => IFrame(p.link, p.route)}
+                    />
+                  ))}
+                <Route
+                  path="/play"
+                  component={() => PlayPage(projectData.slice(0, -2))}
+                />
+                {/*<Route path="/web-piano" component={() => IFra} />*/}
+                <Route
+                  component={() => (
+                    <div>
+                      Couldn't find the page/url you're looking for
+                    </div>
+                  )}
+                />
+              </Switch>
+            </div>
+          </Router>
+        );
     }
 }
 
