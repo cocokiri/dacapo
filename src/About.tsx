@@ -23,14 +23,14 @@ const About = () => (
         <br/>
         <br/>
         {images.map(image => (
-            <>
+            <React.Fragment key={image.name}>
                 <Image src={image.path}/>
                 <div style={{marginBottom: '0.2em'}}/>
                 <Header>{image.name}</Header>
                 <Text>{image.caption}</Text>
                 <br/>
                 <br/>
-            </>
+            </React.Fragment>
         ))}
         <br/>
         <br/>

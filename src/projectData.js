@@ -13,6 +13,8 @@ import spaceshooter from "./play_images/SpaceShooter_800x600.gif"
 import intervaltraining from "./play_images/IntervalTraining_800x290.gif"
 import deeppose from "./play_images/deeposedance3.gif"
 import chem3D from "./play_images/chemistry3D_3.gif"
+import oasys from "./play_images/oasys.gif"
+import lupa_trailer from "./play_images/lupa_trailer.gif"
 
 
 const projectData = [
@@ -24,25 +26,28 @@ const projectData = [
         link: "https://cocokiri.github.io/polyphon/",
         route: 'polyphonic',
         features: ['JS'],
-        text: (<div>
-            See your music live <br/>
-            Develop insane intuition <br/>
-            An interactive spectrogram that can instantly detect the
-            note and chord(!) you are playing. Get a glimpse at the physics of sound while jamming or practicing.
-            <br/>
-            <br/>
-            <br/>
-            <em>Happy to say that this is by far the fastest(20ms) and most accurate music viz and polyphonic
-                detection on the open web. Sing a song. </em>
-            <br/>
-            <br/>
-            <em>Polyphonic chord detection FTW</em>
-        </div>),
-        alttext: (<div>
-            See your music live <br/>
-            An interactive spectrogram that can instantly detect the
-            note and chord(!) you are playing. Get a glimpse at the physics of sound while jamming or practicing.
-        </div>)
+        text: (
+            <div>
+                See your music live <br/>
+                Develop insane intuition <br/>
+                An interactive spectrogram that can instantly detect the
+                note and chord(!) you are playing. Get a glimpse at the physics of sound while jamming or practicing.
+                <br/>
+                <br/>
+                <br/>
+                <em>Happy to say that this is by far the fastest(20ms) and most accurate music viz and polyphonic
+                    detection on the open web. Sing a song. </em>
+                <br/>
+                <br/>
+                <em>Polyphonic chord detection FTW</em>
+            </div>),
+        alttext: (
+            <div>
+                See your music live
+                <br/>
+                An interactive spectrogram that can instantly detect the
+                note and chord(!) you are playing. Get a glimpse at the physics of sound while jamming or practicing.
+            </div>)
     },
     {
         title: "Soundman",
@@ -95,10 +100,11 @@ const projectData = [
         title: "RealTime Pitch Detection and Visualization",
         subtitle: "Fast and reliable",
         image: pitchvis,
-        link: "https://cocokiri.github.io/PitchVisualizer-Spectrogram/",
+        link: null,
         route: "monophonic",
         features: ['JS'],
         text: <>
+            Newer version above.
             I made this intuitive, realtime spectrogram because all other pitch detection and spectrogram
             products on web/mobile were horrible. <br/><br/> E.g. bad mappings (<em>hello audacity</em>), dumb
             Signal Processing code (<em>why dafuq would I need autocorrelation for monophonics, Boris Smus?</em>)
@@ -233,6 +239,38 @@ const projectData = [
             <br/>
         </>)
     },
+    {
+        title: "Oasys STEM Course Maker",
+        subtitle: "Explore Atombonding in 3D",
+        link: "https://joinoasys.org/create",
+
+        image: oasys,
+        text: (<>
+            Collaborated to create a standalone STEM lesson web authoring tool
+            <br/>
+            <em>You can embed text, simulations, images, gifs and quizzes.
+                You can also create intelligent coursepaths (adaptive learning) based how users interact.
+            </em>
+            <br/>
+        </>)
+    },
+    {
+        title: "Lupa – Chrome Extension",
+        subtitle: "Horizontal, mini-social review layer. Friend-sourced just-in-time context",
+        link: "https://chrome.google.com/webstore/detail/lupa-reader/jldgmbdpnaegnmbejnpdokhkmobbonhg?authuser=0",
+        image: lupa_trailer,
+        text: (<>
+            Chrome extension that lets you post and review on top of any web content.
+            Prototype for social resource ranking that's not reliant on explicit search (like Google, FB, Yelp etc. do)
+            <br/>
+            <em>
+                Group members, followers can see your thoughts exactly when they visit that page - just in time context.
+                This makes the value from thoughts posted time independent – it doesn't get lost in a feed.
+            </em>
+            <br/>
+        </>)
+    },
+
 ]
 
 export default projectData

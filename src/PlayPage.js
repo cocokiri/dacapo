@@ -1,5 +1,4 @@
 import React from 'react'
-import createBrowserHistory from 'history/createBrowserHistory';
 
 import {
     Column,
@@ -28,7 +27,7 @@ const PlayPage = (projects = []) => (
                 <br/>
                 <br/>
                 <br/>
-                {projects.map(p => (
+                {projects.slice(0,11).map(p => (
                     <>
                         {p.title === "SpaceShooter 3D" && <Interlude>
                             Beneath are some Unity Experiments. I made them to learn programming.
@@ -39,7 +38,7 @@ const PlayPage = (projects = []) => (
                         <Column key={p.title} style={{flexGrow: 1, width: '80%', background: "rgba(0,0,0,0.4)"}}>
                             <HeaderWide>{p.title.toUpperCase()}</HeaderWide>
                             {p.subtitle && <Text style={{paddingLeft: 0, paddingRight: 0, width: "100%", maxWidth: 100 + "%"}}>{p.subtitle}</Text>}
-                            <Image style={{marginBottom: 0.05+"em", width: "97%"}} src={p.image}/>
+                            <Image style={{marginBottom: 0.05+"em", minWidth: "97%", maxWidth:"100%"}} src={p.image}/>
                             {p.link && <Button style={{width: "100%"}} onClick={() => window.location.replace(p.route)}> P L A Y </Button>}
                             <br/>
                             <br/>

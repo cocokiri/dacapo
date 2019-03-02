@@ -1,7 +1,14 @@
 
-type P = {
+/*type P = {
     name: string,
     extra?: number
+}
+
+//functions
+type CounterFN = (start: number) => string*/
+
+interface Couterfn {
+    (name:string): number
 }
 
 interface S {
@@ -18,6 +25,15 @@ class PizzaMaker {
         return { name: event.name, toppings: event.toppings };
     }
 }
+
+const Water: React.SFC<{rect: Rectangle}> = (props) => (
+    <p>
+        {props.rect.area()}
+        <br/>
+        {props.rect.perimeter()}
+    </p>
+)
+
 
 class Employee {
     private _fullName!: string;

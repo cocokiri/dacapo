@@ -19,6 +19,14 @@ const Grid = styled.section`
     flex-wrap: wrap;
 `
 
+const Row = styled.section`
+display:flex;
+flex-direction: row;
+width: 100vw;
+justify-content: space-between;
+text-align: left;
+`
+
 const BackGround = styled.div`
     background-image: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);;
 `
@@ -41,7 +49,7 @@ const Button = styled.button`
     background: turquoise;
     
      &:hover {
-    background: rebeccapurple;
+    background: #786b99;
   }
   z-index: 5;
     transition-duration: 700ms;
@@ -64,11 +72,14 @@ const FeatureHighlight = styled.div`
 
 const Image = styled.img`
   max-width: 85vw;
+  max-height: 80vh;
+  
   z-index: 2;
   /*margin: 2em; */
   //max-height:70vh;
   transition: 0.3s;
   background: white;
+  
   /*border: solid white 3px;*/
   padding: 0.5em;
   //border: 0.5rem white;
@@ -78,6 +89,7 @@ const Image = styled.img`
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
 `
 
+// @ts-ignore
 const Text = styled<{ primary?: boolean }, 'p'>('p')`
   background: yellow;
   text-align: center;
@@ -105,7 +117,7 @@ const TextWhite = styled.p`
   /*margin-top: -1em;*/
   color: whitesmoke;
 `
-
+// @ts-ignore
 const Header = styled<{ primary?: boolean }, 'h1'>('h1')`
   margin:0;
   padding: ${p => p.primary ? "1em" : "0.6em"};
@@ -135,4 +147,4 @@ const HeaderWide = styled.h1`
   box-shadow:0 3px 2px rgba(0, 0, 0, 0.2);
 `
 
-export {TextWhite, BackGround, Interlude, HeaderWide, Grid, Button, Column, Header, Text, FeatureHighlight, Image}
+export {Row, TextWhite, BackGround, Interlude, HeaderWide, Grid, Button, Column, Header, Text, FeatureHighlight, Image}
